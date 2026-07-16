@@ -10,7 +10,8 @@ https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 ## Results
 <img width="1664" height="577" alt="image" src="https://github.com/user-attachments/assets/225bb41e-a0e4-45b2-b0c8-e2daec9299a7" />
 
-<img width="1670" height="565" alt="image" src="https://github.com/user-attachments/assets/e0f624f9-80c5-4bbf-94b5-4842e07e7b6a" />
+<img width="827" height="289" alt="image" src="https://github.com/user-attachments/assets/e59d5c6d-9d32-46aa-a9a2-e045cbd68f71" />
+
 
 ### Undersampling
 | Model | Accuracy | Fraud Recall | F1 |
