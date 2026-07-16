@@ -18,17 +18,18 @@ https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 | Logistic Regression | 93% | 89% | 0.93 |
 | Random Forest | 92% | 87% | 0.91 |
 
-### SMOTE
-| Model | Accuracy | Fraud Recall | F1 |
-|---|---|---|---|
-| Logistic Regression | 98% | 97% | 0.98 |
-| Random Forest | 100% | 100% | 1.00 |
+### SMOTE (fixed — split before resampling)
+| Model               | Recall | Precision | F1   |
+| ------------------- | ------ | --------- | ---- |
+| Logistic Regression | 89.8%  | 13.4%     | 0.23 |
+| Random Forest       | 82.7%  | 83.5%     | 0.83 |
 
-## Key Findings
 - Undersampling: LR beat RF (small dataset, RF couldn't shine)
-- SMOTE: RF dominated with perfect recall
-- RF's 100% score likely reflects overfitting on synthetic 
-  SMOTE data — real-world testing needed
+- SMOTE (initial attempt): RF showed 100% recall — turned out to be data 
+  leakage from resampling before train/test split
+- SMOTE (fixed): RF genuinely outperforms LR — 82.7% recall, 83.5% precision 
+  vs LR's 89.8% recall but only 13.4% precision (too many false alarms)
+- Lesson learned: always split data before applying SMOTE/oversampling
 
 ## What's Next
 - [ ] Test on truly unseen real fraud cases
